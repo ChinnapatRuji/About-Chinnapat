@@ -3,70 +3,83 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
+  <title>My Portfolio Website</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <header>
-    <h1>Your Name</h1>
-    <p>Web Developer | Programmer | Designer</p>
-    <img src="your-photo.jpg" alt="Your Photo" />
+  <header id="main-header">
+    <div class="header-container">
+      <a href="#logo" class="logo">Chinnapat Rujiratanalai</a>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+      </nav>
+    </div>
   </header>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#experience">Experience</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-  </nav>
+
   <section id="about" class="fade-section">
-    <h2>About Me</h2>
-    <p>Hello! I'm a passionate web developer with experience in building responsive and dynamic websites. I love creating user-friendly interfaces and seamless user experiences.</p>
+    <div class="my-image">
+      <img src="mypic.jpg" alt="">
+    </div>
+    <div class="about-me-content">
+      <h1>Hello! I'm <span>Chinnapat</span></h1>
+      <p>I'm an Electrical Engineering student with a strong passion for entrepreneurship and a keen interest in artificial intelligence, machine learning, and data-driven innovation. I thrive at the intersection of technology and business, where creative ideas meet real-world impact.</p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/chinnapat-rujiratanalai-4ab8a1284/" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/ChinnapatRuji" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+    </div>
   </section>
-  <section id="projects" class="fade-section">
-    <h2>Projects</h2>
+
+  <section id="projects" class="projects fade-section">
+    <h1>Projects</h1>
     <div class="project">
-      <h3 onclick="toggleDetails(this)">Project 1</h3>
+      <h2 onclick="toggleDetails(this)">Dashboard Showcase</h2>
       <div class="project-details">
-        <p>Detailed description of Project 1 with technologies used and challenges faced.</p>
+        <iframe title="PBI_Sales" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiMTM1Y2FlMjktNTg0Ny00ZjZiLTkwODktNTIyYmVhZDY0MDRiIiwidCI6ImZlZDBmMGI1LWFlY2ItNGZkZi1iYjQzLWY2MjlmMzY1MWVjZiIsImMiOjEwfQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>
       </div>
     </div>
     <div class="project">
-      <h3 onclick="toggleDetails(this)">Project 2</h3>
+      <h2 onclick="toggleDetails(this)">Project 2</h2>
       <div class="project-details">
         <p>Detailed description of Project 2 with technologies used and challenges faced.</p>
       </div>
     </div>
   </section>
+
   <section id="experience" class="fade-section">
-    <h2>Experience</h2>
+    <h1>Experience</h1>
     <div class="experience">
-      <h3>Job Title - Company</h3>
+      <h2>Job Title - Company</h2>
       <p>Duration</p>
       <p>Summary of what you did.</p>
     </div>
     <div class="experience">
-      <h3>Internship - Company</h3>
+      <h2>Internship - Company</h2>
       <p>Duration</p>
       <p>Summary of what you did.</p>
     </div>
   </section>
+
   <section id="skills" class="fade-section">
-    <h2>Skills</h2>
+    <h1>Skills</h1>
     <div class="skill">HTML, CSS, JavaScript</div>
     <div class="skill">React, Vue, Angular</div>
     <div class="skill">Node.js, Express, MongoDB</div>
     <div class="skill">Git, GitHub, CI/CD</div>
   </section>
-  <section id="contact" class="fade-section">
-    <h2>Contact</h2>
-    <p>Email: your.email@example.com</p>
-    <p>LinkedIn: linkedin.com/in/yourname</p>
-    <p>GitHub: github.com/yourusername</p>
-  </section>
+
   <footer>
     &copy; 2025 Your Name. All rights reserved.
   </footer>
+
   <script>
     function toggleDetails(header) {
       const details = header.nextElementSibling;
