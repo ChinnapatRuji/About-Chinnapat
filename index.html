@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Your Name</h1>
+    <p>Web Developer | Programmer | Designer</p>
+    <img src="your-photo.jpg" alt="Your Photo" />
+  </header>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <section id="about" class="fade-section">
+    <h2>About Me</h2>
+    <p>Hello! I'm a passionate web developer with experience in building responsive and dynamic websites. I love creating user-friendly interfaces and seamless user experiences.</p>
+  </section>
+  <section id="projects" class="fade-section">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3 onclick="toggleDetails(this)">Project 1</h3>
+      <div class="project-details">
+        <p>Detailed description of Project 1 with technologies used and challenges faced.</p>
+      </div>
+    </div>
+    <div class="project">
+      <h3 onclick="toggleDetails(this)">Project 2</h3>
+      <div class="project-details">
+        <p>Detailed description of Project 2 with technologies used and challenges faced.</p>
+      </div>
+    </div>
+  </section>
+  <section id="experience" class="fade-section">
+    <h2>Experience</h2>
+    <div class="experience">
+      <h3>Job Title - Company</h3>
+      <p>Duration</p>
+      <p>Summary of what you did.</p>
+    </div>
+    <div class="experience">
+      <h3>Internship - Company</h3>
+      <p>Duration</p>
+      <p>Summary of what you did.</p>
+    </div>
+  </section>
+  <section id="skills" class="fade-section">
+    <h2>Skills</h2>
+    <div class="skill">HTML, CSS, JavaScript</div>
+    <div class="skill">React, Vue, Angular</div>
+    <div class="skill">Node.js, Express, MongoDB</div>
+    <div class="skill">Git, GitHub, CI/CD</div>
+  </section>
+  <section id="contact" class="fade-section">
+    <h2>Contact</h2>
+    <p>Email: your.email@example.com</p>
+    <p>LinkedIn: linkedin.com/in/yourname</p>
+    <p>GitHub: github.com/yourusername</p>
+  </section>
+  <footer>
+    &copy; 2025 Your Name. All rights reserved.
+  </footer>
+  <script>
+    function toggleDetails(header) {
+      const details = header.nextElementSibling;
+      const isVisible = details.style.display === 'block';
+      document.querySelectorAll('.project-details').forEach(el => el.style.display = 'none');
+      details.style.display = isVisible ? 'none' : 'block';
+    }
+
+    // Fade effect on scroll
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    }, { threshold: 0.3 });
+
+    document.querySelectorAll('.fade-section').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
