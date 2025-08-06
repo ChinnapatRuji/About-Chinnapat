@@ -26,13 +26,16 @@
     </div>
     <div class="about-me-content">
       <h1>Hello! I'm <span>Chinnapat</span></h1>
-      <p>I'm an Electrical Engineering student with a strong passion for entrepreneurship and a keen interest in artificial intelligence, machine learning, and data-driven innovation. I thrive at the intersection of technology and business, where creative ideas meet real-world impact.</p>
+      <p>Designed and implemented a personal project that automates news discovery and relevance ranking using modern NLP techniques</p>
       <div class="social-icons">
         <a href="https://www.linkedin.com/in/chinnapat-rujiratanalai-4ab8a1284/" target="_blank" rel="noopener noreferrer">
           <i class="fa-brands fa-linkedin"></i>
         </a>
         <a href="https://github.com/ChinnapatRuji" target="_blank" rel="noopener noreferrer">
           <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.instagram.com/chin_ruji/" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-instagram"></i>
         </a>
       </div>
     </div>
@@ -41,17 +44,52 @@
   <section id="projects" class="fade-section">
     <h1>Projects</h1>
     <div class="project">
-      <h2>Data Visualisation</h2>
-      <h3 onclick="toggleDetails(this)">Dashboard Showcase</h3>
+      <h2>Data Visualisation (Power BI)</h2>
+      <h3>Power BI</h3>
+      <p>Designed interactive dashboards using Power BI to turn complex data into clear, actionable insights.</p>
+      <p>Key skills:</p>
+      <ul>
+        <li>Data modeling with Power Query & DAX</li>
+        <li>Custom visuals & user-friendly navigation</li>
+      </ul>
+      <h4 onclick="toggleDetails(this)">Show Dashboard</h4>
       <div class="project-details">
-        <iframe title="PBI_Sales" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiMTM1Y2FlMjktNTg0Ny00ZjZiLTkwODktNTIyYmVhZDY0MDRiIiwidCI6ImZlZDBmMGI1LWFlY2ItNGZkZi1iYjQzLWY2MjlmMzY1MWVjZiIsImMiOjEwfQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>
+        <iframe title="PBI_Sales" width="1024" height="612" src="https://app.powerbi.com/view?r=eyJrIjoiMTM1Y2FlMjktNTg0Ny00ZjZiLTkwODktNTIyYmVhZDY0MDRiIiwidCI6ImZlZDBmMGI1LWFlY2ItNGZkZi1iYjQzLWY2MjlmMzY1MWVjZiIsImMiOjEwfQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>      </div>
       </div>
     </div>
     <div class="project">
-      <h2 onclick="toggleDetails(this)">Artificial intelligence</h2>
-      <div class="project-details">
-        <p>Detailed description of Project 2 with technologies used and challenges faced.</p>
-      </div>
+      <h2>Artificial intelligence</h2>
+      <h3>
+        <a href="https://github.com/ChinnapatRuji/brewspaper" target="_blank" rel="noopener noreferrer">
+          Brewspaper
+        </a>
+      </h3>
+      <p>Personal project to fetch news using RSS feeds, using HuggingFace to embed the news into a vector and store them in Chroma database. Then user can type news of any topic of interest. Using RAG, fetch top 30 most cosine similar news and feed to LLM to pick most relevant news to the topic</p>
+      <br>
+      <h3>
+        <a href="https://github.com/ChinnapatRuji/RAG-PDF-Inquiry" target="_blank" rel="noopener noreferrer">
+          RAG PDF Reader
+        </a>
+      </h3>
+      <p>Built a system to extract answers from multiple PDFs by parsing text with fitz, splitting content into manageable chunks, embedding them using HuggingFace transformers, and applying RAG to retrieve the most relevant segments before querying an LLM for accurate responses.</p>
+    </div>
+    <div class="project">
+      <h2>Robotics and Automation</h2>
+      <h3>
+        <a href="" target="_blank" rel="noopener noreferrer">
+          Autonomous Navigation on Turtlebot3 Burger
+        </a>
+      </h3>
+      <p>Build a mobile robot that can autonomously explore and navigate an unknown maze using Simultaneous Localization and Mapping (SLAM) and LIDAR. The TurtleBot uses LIDAR to detect walls and obstacles, applies path-planning algorithms and obstacle avoidance to navigate, while SLAM enables it to build a map and localize itself in real time.</p>
+    </div>
+    <div class="project">
+      <h2>Verilog & FPGA</h2>
+      <h3>
+        <a href="" target="_blank" rel="noopener noreferrer">
+          Overcooked on FPGA
+        </a>
+      </h3>
+      <p>Replication of Overcooked game on a LED display of size 64 by 96 pixels on Basys3</p>
     </div>
   </section>
 
@@ -59,7 +97,9 @@
     <h1>Experience</h1>
     <div class="experience"> 
       <div class="tcp-logo">
-        <img src="TCP logo.jpg" alt="">
+        <a href="https://www.tcp.com/en/home" target="_blank">
+          <img src="TCP logo.jpg" alt="">
+        </a>
       </div>
       <div class="experience-content">
         <h2>AI Developer and Data Analyst Internship - TCP Group</h2>
@@ -75,22 +115,21 @@
 
   <section id="skills" class="fade-section">
     <h1>Skills</h1>
-    <div class="skill">HTML, CSS, JavaScript</div>
-    <div class="skill">React, Vue, Angular</div>
-    <div class="skill">Node.js, Express, MongoDB</div>
-    <div class="skill">Git, GitHub, CI/CD</div>
+    <div class="skill">Python, C++, Verilog, SQL</div>
+    <div class="skill">HuggingFace, Ollama</div>
+    <div class="skill">Power BI, Power Automate, n8n</div>
+    <div class="skill">Basic HTML, CSS, JavaScript</div>
   </section>
 
   <footer>
-    &copy; 2025 Your Name. All rights reserved.
+    &copy; 2025 Chinnapat Rujiratanalai. All rights reserved.
   </footer>
 
   <script>
     function toggleDetails(header) {
       const details = header.nextElementSibling;
-      const isVisible = details.style.display === 'block';
-      document.querySelectorAll('.project-details').forEach(el => el.style.display = 'none');
-      details.style.display = isVisible ? 'none' : 'block';
+      const isVisible = details.style.display === 'flex';
+      details.style.display = isVisible ? 'none' : 'flex';
     }
 
     // Fade effect on scroll
