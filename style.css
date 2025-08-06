@@ -73,7 +73,8 @@ section {
 #about .my-image {
   z-index: -1;
   width: 28%;
-  margin-right: 1rem;
+  display: flex;
+  justify-content: center;
 }
 
 #about .my-image img {
@@ -184,7 +185,7 @@ section {
 .experience {
   display: flex;
   align-items: flex-start;
-  gap: 0.1rem;
+  gap: 2rem;
   flex-wrap: wrap;
   max-width: 1000px;
   margin-bottom: 1.5rem;
@@ -192,8 +193,10 @@ section {
 
 #experience .tcp-logo {
   width: clamp(100px, 10vw, 120px);
-  margin-right: 1rem;
+
   margin-top: 1rem;
+  display: flex;
+  justify-content: center;
 }
 
 #experience .tcp-logo img {
@@ -259,6 +262,7 @@ footer {
 @media(max-width:995px) {
   #about {
     flex-direction: column;
+    align-items: center;
   }
   .experience {
     flex-direction: column;
