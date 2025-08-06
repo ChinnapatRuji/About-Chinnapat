@@ -6,7 +6,7 @@
   <title>My Portfolio Website</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet"></head>
 <body>
   <header id="main-header">
     <div class="header-container">
@@ -38,16 +38,17 @@
     </div>
   </section>
 
-  <section id="projects" class="projects fade-section">
+  <section id="projects" class="fade-section">
     <h1>Projects</h1>
     <div class="project">
-      <h2 onclick="toggleDetails(this)">Dashboard Showcase</h2>
+      <h2>Data Visualisation</h2>
+      <h3 onclick="toggleDetails(this)">Dashboard Showcase</h3>
       <div class="project-details">
         <iframe title="PBI_Sales" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiMTM1Y2FlMjktNTg0Ny00ZjZiLTkwODktNTIyYmVhZDY0MDRiIiwidCI6ImZlZDBmMGI1LWFlY2ItNGZkZi1iYjQzLWY2MjlmMzY1MWVjZiIsImMiOjEwfQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>
       </div>
     </div>
     <div class="project">
-      <h2 onclick="toggleDetails(this)">Project 2</h2>
+      <h2 onclick="toggleDetails(this)">Artificial intelligence</h2>
       <div class="project-details">
         <p>Detailed description of Project 2 with technologies used and challenges faced.</p>
       </div>
@@ -56,15 +57,19 @@
 
   <section id="experience" class="fade-section">
     <h1>Experience</h1>
-    <div class="experience">
-      <h2>Job Title - Company</h2>
-      <p>Duration</p>
-      <p>Summary of what you did.</p>
-    </div>
-    <div class="experience">
-      <h2>Internship - Company</h2>
-      <p>Duration</p>
-      <p>Summary of what you did.</p>
+    <div class="experience"> 
+      <div class="tcp-logo">
+        <img src="TCP logo.jpg" alt="">
+      </div>
+      <div class="experience-content">
+        <h2>AI Developer and Data Analyst Internship - TCP Group</h2>
+        <p>June 2025 - July 2025</p>
+        <ul>
+          <li>Created dynamic dashboards using Power BI to deliver insights and support data-driven decision-making.</li>
+          <li>Utilized Power Automate (RPA) to query dashboard metrics and automatically notify relevant stakeholders when specific KPIs are triggered and automate other repetitive tasks.</li>
+          <li>Developed an AI-powered app using RAG to extract answers from PDFs by embedding text with Hugging Face transformers, retrieving relevant chunks via cosine similarity, and generating responses using an Ollama-hosted LLM.</li>
+        </ul>
+      </div>
     </div>
   </section>
 

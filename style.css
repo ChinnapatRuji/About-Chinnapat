@@ -50,10 +50,14 @@ nav a {
   transition: color 0.3s ease;
 }
 
+nav a:hover {
+  color: rgb(0, 179, 255);
+}
+
 section {
   min-height: 100vh;
   padding: 4rem 6rem;
-  transform: translateY(30px);
+  transform: translateY(20px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
@@ -68,8 +72,7 @@ section {
 
 #about .my-image {
   z-index: -1;
-  width: 30%;
-  padding-left: 5%;
+  width: 28%;
 }
 
 #about .my-image img {
@@ -85,18 +88,21 @@ section {
 }
 
 .about-me-content h1 {
-  font-size: 3rem;
+  font-size: clamp(1.5rem, 5vw, 3rem);
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
 }
 
 .about-me-content p {
-  font-size: 1rem;
+  font-size: 1.2rem;
+  text-align: justify;
+  line-height: 1.5;
 }
 
 .about-me-content h1 span {
   color: rgb(0, 21, 92);
   text-shadow: 0 0 10px #2578d0;
+  font-family: 'Dancing Script';
 }
 
 .social-icons a {
@@ -106,37 +112,38 @@ section {
   width: 4rem;
   height: 4rem;
   background-color: transparent;
-  border: 0.2rem solid;
+  border: 0.2rem solid darkblue;
   font-size: 2rem;
   border-radius: 50%;
   margin: 2rem 1.5rem 1.5rem;
   transition: 0.3 ease;
+  color: darkblue;
  }
 
  .social-icons a:hover {
-  color: rgb(17, 0, 255);
+  color: rgb(0, 179, 255);
   transform: scale(1.1) translateY(-5px);
  }
-
-h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 3px solid #222;
-}
 
 .project, .experience, .skill {
   margin-bottom: 1.5rem;
   max-width: 800px;
 }
 
-.project h2 {
+#projects h1, #experience h1, #skills h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #222;
+}
+
+.project h3 {
   cursor: pointer;
   color: #5100ff;
   font-size: 1.2rem;
 }
 
-.project h2:hover {
+.project h3:hover {
   text-decoration: underline;
 }
 
@@ -147,6 +154,48 @@ h1 {
   background-color: #eee;
   border-left: 4px solid #222;
   border-radius: 6px;
+}
+
+.experience {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.1rem;
+  margin-bottom: 2rem;
+}
+
+#experience .tcp-logo {
+  width: auto;
+  margin-right: 1rem;
+}
+
+#experience .tcp-logo img {
+  position: relative;
+  width: 8vw;
+}
+
+.experience-content {
+  max-width: 800px;
+  flex: 1;
+}
+
+.experience-content h2 {
+  font-size: clamp(1.5rem, 1vw, 3rem);
+  padding-bottom: 0.2rem;
+}
+
+.experience-content p {
+  padding-bottom: 0.6rem;
+  text-align: justify;
+}
+
+.experience-content ul {
+  padding-left: 1rem;
+  text-align: justify;
+}
+
+.experience-content li {
+  padding-bottom: 0.5rem;
+  text-align: justify;
 }
 
 .skill {
@@ -162,7 +211,19 @@ footer {
   font-size: 0.9rem;
 }
 
+.fade-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
 .fade-section.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media(max-width:995px) {
+  #about {
+    flex-direction: column;
+  }
 }
