@@ -152,10 +152,10 @@
     document.querySelectorAll('.fade-section').forEach(section => {
       observer.observe(section);
     });
+
     const openMenu = document.getElementById('open-menu');
     const closeMenu = document.getElementById('close-menu');
     const navContainer = document.querySelector('.nav-container');
-
     function toggleMenu(show) {
       if (show) {
         navContainer.classList.add('show');
@@ -167,21 +167,29 @@
         openMenu.style.display = 'block';
       }
     }
-    openMenu.addEventListener('click', () => toggleMenu(true));
-    closeMenu.addEventListener('click', () => toggleMenu(false));
-    document.addEventListener('DOMContentLoaded', () => {
+
+    function updateMenuOnResize() {
       if (window.innerWidth <= 995) {
-        openMenu.style.display = 'block';
-        closeMenu.style.display = 'none';
-        navContainer.classList.remove('show');
+        if (!navContainer.classList.contains('show')) {
+          openMenu.style.display = 'block';
+          closeMenu.style.display = 'none';
+        } else {
+          openMenu.style.display = 'none';
+          closeMenu.style.display = 'block';
+        }
       } else {
         openMenu.style.display = 'none';
         closeMenu.style.display = 'none';
         navContainer.classList.remove('show');
       }
-    });
+    }
 
-  </script>
-</body>
+    openMenu.addEventListener('click', () => toggleMenu(true));
+    closeMenu.addEventListener('click', () => toggleMenu(false));
 
+    document.addEventListener('DOMContentLoaded', updateMenuOnResize);
+    window.addEventListener('resize', updateMenuOnResize);
+
+    </script>
+  </body>
 </html>
