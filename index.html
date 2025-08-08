@@ -11,11 +11,17 @@
   <header id="main-header">
     <div class="header-container">
       <a href="#logo" class="logo">Chinnapat Rujiratanalai</a>
+      <div class="menu-toggle">
+        <i class="fa-solid fa-bars" id="open-menu"></i>
+        <i class="fa-solid fa-xmark" id="close-menu"></i>
+      </div>
       <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
+        <div class="nav-container">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+        </div>
       </nav>
     </div>
   </header>
@@ -146,6 +152,35 @@
     document.querySelectorAll('.fade-section').forEach(section => {
       observer.observe(section);
     });
+    const openMenu = document.getElementById('open-menu');
+    const closeMenu = document.getElementById('close-menu');
+    const navContainer = document.querySelector('.nav-container');
+
+    function toggleMenu(show) {
+      if (show) {
+        navContainer.classList.add('show');
+        openMenu.style.display = 'none';
+        closeMenu.style.display = 'block';
+      } else {
+        navContainer.classList.remove('show');
+        closeMenu.style.display = 'none';
+        openMenu.style.display = 'block';
+      }
+    }
+    openMenu.addEventListener('click', () => toggleMenu(true));
+    closeMenu.addEventListener('click', () => toggleMenu(false));
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.innerWidth <= 995) {
+        openMenu.style.display = 'block';
+        closeMenu.style.display = 'none';
+        navContainer.classList.remove('show');
+      } else {
+        openMenu.style.display = 'none';
+        closeMenu.style.display = 'none';
+        navContainer.classList.remove('show');
+      }
+    });
+
   </script>
 </body>
 </html>
