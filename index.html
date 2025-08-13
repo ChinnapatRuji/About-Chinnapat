@@ -48,9 +48,9 @@
   </section>
 
   <section id="projects" class="fade-section">
-    <h1>Projects</h1>
-    <div class="project">
-      <h2>Data Visualisation (Power BI)</h2>
+    <h1>Projects 🗂️</h1>
+    <div class="project-topic">
+      <h2 onclick="toggleDetails(this)">Data Visualisation</h2>
       <h3>Power BI</h3>
       <p>Designed interactive dashboards using Power BI to turn complex data into clear, actionable insights.</p>
       <p>Key skills:</p>
@@ -63,44 +63,42 @@
         <iframe title="PBI_Sales" width="1024" height="612" src="https://app.powerbi.com/view?r=eyJrIjoiMTM1Y2FlMjktNTg0Ny00ZjZiLTkwODktNTIyYmVhZDY0MDRiIiwidCI6ImZlZDBmMGI1LWFlY2ItNGZkZi1iYjQzLWY2MjlmMzY1MWVjZiIsImMiOjEwfQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>      </div>
       </div>
     </div>
-    <div class="project">
+    <div class="project-topic">
       <h2>Artificial intelligence</h2>
       <h3>
+        Brewspaper
         <a href="https://github.com/ChinnapatRuji/brewspaper" target="_blank" rel="noopener noreferrer">
-          Brewspaper
-        </a>
+          <i class="fa-brands fa-github"></i>
+        </a>  
       </h3>
       <p>Personal project to fetch news using RSS feeds, using HuggingFace to embed the news into a vector and store them in Chroma database. Then user can type news of any topic of interest. Using RAG, fetch top 30 most cosine similar news and feed to LLM to pick most relevant news to the topic</p>
       <br>
       <h3>
+        RAG PDF Reader
         <a href="https://github.com/ChinnapatRuji/RAG-PDF-Inquiry" target="_blank" rel="noopener noreferrer">
-          RAG PDF Reader
+          <i class="fa-brands fa-github"></i>
         </a>
       </h3>
       <p>Built a system to extract answers from multiple PDFs by parsing text with fitz, splitting content into manageable chunks, embedding them using HuggingFace transformers, and applying RAG to retrieve the most relevant segments before querying an LLM for accurate responses.</p>
     </div>
-    <div class="project">
+    <div class="project-topic">
       <h2>Robotics and Automation</h2>
       <h3>
-        <a href="" target="_blank" rel="noopener noreferrer">
-          Autonomous Navigation on Turtlebot3 Burger
-        </a>
+        Autonomous Navigation on Turtlebot3 Burger
       </h3>
       <p>Build a mobile robot that can autonomously explore and navigate an unknown maze using Simultaneous Localization and Mapping (SLAM) and LIDAR. The TurtleBot uses LIDAR to detect walls and obstacles, applies path-planning algorithms and obstacle avoidance to navigate, while SLAM enables it to build a map and localize itself in real time.</p>
     </div>
-    <div class="project">
+    <div class="project-topic">
       <h2>Verilog & FPGA</h2>
       <h3>
-        <a href="" target="_blank" rel="noopener noreferrer">
-          Overcooked on FPGA
-        </a>
+        Overcooked on FPGA
       </h3>
       <p>Replication of Overcooked game on a LED display of size 64 by 96 pixels on Basys3</p>
     </div>
   </section>
 
   <section id="experience" class="fade-section">
-    <h1>Experience</h1>
+    <h1>Experience 💼</h1>
     <div class="experience"> 
       <div class="tcp-logo">
         <a href="https://www.tcp.com/en/home" target="_blank">
@@ -120,7 +118,7 @@
   </section>
 
   <section id="skills" class="fade-section">
-    <h1>Skills</h1>
+    <h1>Skills 🧠</h1>
     <div class="skill">Python, C++, Verilog, SQL</div>
     <div class="skill">HuggingFace, Ollama</div>
     <div class="skill">Power BI, Power Automate, n8n</div>
@@ -147,8 +145,7 @@
           entry.target.classList.remove('visible');
         }
       });
-    }, { threshold: 0.3 });
-
+    }, { threshold: 0.2 });
     document.querySelectorAll('.fade-section').forEach(section => {
       observer.observe(section);
     });

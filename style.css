@@ -156,40 +156,45 @@ section {
   border-bottom: 3px solid #222;
 }
 
-.project {
+.project-topic {
   margin-bottom: 2rem;
   max-width: 1050px;
   text-align: left;
 }
 
-.project h2 {
+.project-topic h2 {
   margin-bottom: 0.5rem;
   font-size: clamp(1.2rem, 3.5vw, 1.8rem);
 }
 
-.project ul {
+.project-topic ul {
   padding-left: 1rem;
   text-align: left;
   margin-bottom: 0.3rem;
 }
 
-.project h3 {
+.project-topic h3 {
   margin-bottom: 0.5rem;
-  color: rgb(0, 7, 107);
-  text-decoration: underline;
+  color: rgb(0, 0, 0);
 }
 
-.project h3 a:visited {
+.project-topic h3 a i{
+  font-size: 1.5rem;
   color: rgb(0, 7, 107);
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
+.project-topic h3 a i:hover {
+  transform: scale(1.1);
+  color: rgb(0, 179, 255);
+}
 
-.project h4 {
+.project-topic h4 {
   cursor: pointer;
   font-size: 1rem;
 }
 
-.project h4:hover {
+.project-topic h4:hover {
   text-decoration: underline;
   color: #2578d0;
 }
