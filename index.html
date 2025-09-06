@@ -58,9 +58,9 @@
         <li>Data modeling with Power Query & DAX</li>
         <li>Custom visuals & user-friendly navigation</li>
       </ul>
-      <h4 onclick="toggleDetails(this)">Show Dashboard</h4>
+      <h4 onclick="toggleDetails(this)">Show Sample Dashboard</h4>
       <div class="showmore-details">
-        <iframe title="PBI_Sales" width="1024" height="612" src="https://app.powerbi.com/view?r=eyJrIjoiMTM1Y2FlMjktNTg0Ny00ZjZiLTkwODktNTIyYmVhZDY0MDRiIiwidCI6ImZlZDBmMGI1LWFlY2ItNGZkZi1iYjQzLWY2MjlmMzY1MWVjZiIsImMiOjEwfQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>      </div>
+        <iframe title="PBI_Sales" width="1024" height="576" src="https://app.powerbi.com/view?r=eyJrIjoiNDcwZjg3NzQtY2Q1ZC00NjhkLTljYTgtODU3M2U3NWI5NGZlIiwidCI6ImZlZDBmMGI1LWFlY2ItNGZkZi1iYjQzLWY2MjlmMzY1MWVjZiIsImMiOjEwfQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>
       </div>
     </div>
     <div class="project">
@@ -187,6 +187,12 @@
     document.addEventListener('DOMContentLoaded', updateMenuOnResize);
     window.addEventListener('resize', updateMenuOnResize);
 
-    </script>
-  </body>
+    window.addEventListener('wheel', function(e) {
+      if (e.ctrlKey) {
+        e.preventDefault();
+      }
+    }, { passive: false });
+
+  </script>
+</body>
 </html>

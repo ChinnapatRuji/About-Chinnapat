@@ -20,7 +20,7 @@ html, body {
 header {
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 9999;
   background-color: #ffffff;
   transition: background-color 0.3s ease;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -202,6 +202,7 @@ section {
 
 .showmore-details {
   display: none;
+  flex-direction: column;
   margin-top: 0.5rem;
   padding: 0.75rem 1rem;
   background-color: #eee;
@@ -357,6 +358,7 @@ footer {
   }
 
   #about .my-image {
+    padding-top: 2rem;
     width: 70%;
   }
 
@@ -380,7 +382,7 @@ footer {
 
   .project iframe {
     width: 100%;
-    height: auto;
+    height: 40vh;
   }
 
   .experience {
